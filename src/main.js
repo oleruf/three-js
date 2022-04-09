@@ -9,7 +9,7 @@ export default class {
         parent: document.body,
         antialias: true,
         alpha: false,
-        clearColor: 'gray',
+        clearColor: 'blue',
         pixelRatio: 1
       }
     })
@@ -17,6 +17,8 @@ export default class {
   }
 
   createObject() {
+    Viewer.scene.add(new THREE.GridHelper(10, 10))
+
     this.object = new THREE.Mesh(
       new THREE.BoxGeometry(1, 1, 1),
       new THREE.MeshStandardMaterial({ color: 'gray' })
